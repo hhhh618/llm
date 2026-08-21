@@ -1,0 +1,18 @@
+{
+  "name": "llm",
+  "version": "0.1.0",
+  "description": "liliming’s personal digital twin",
+  "author": {
+    "name": "liliming"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "liliming’s Digital Twin",
+    "shortDescription": "liliming’s personal digital twin.",
+    "longDescription": "A personal knowledge base and workflow layer for AI coding agents.",
+    "developerName": "liliming",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "Use liliming’s personal knowledge and workflows to help with this task."
+  }
+}
