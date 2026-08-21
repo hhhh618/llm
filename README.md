@@ -5,11 +5,16 @@
 This repository stores the reusable, non-sensitive parts of liliming’s
 knowledge, preferences, workflows, and AI-agent instructions.
 
+The repository uses a dual-plugin layout: Codex reads `.codex-plugin/`, while
+Claude Code reads `.claude-plugin/`. Both share the same `skills/` and
+`knowledge/` directories.
+
 ## Structure
 
 - `knowledge/` — stable personal context and working preferences
 - `skills/` — Codex-compatible skills that apply this context
 - `.codex-plugin/` — plugin metadata
+- `.claude-plugin/` — Claude Code plugin metadata
 
 The repository must not contain passwords, API keys, private session logs,
 browser history, or other sensitive personal data.
