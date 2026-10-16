@@ -1,0 +1,760 @@
+{
+  "schema_version": "1.0.0",
+  "status_checked_at": "2026-10-15",
+  "time_zone": "Asia/Taipei",
+  "source_report": "resources/09-多标准对照.md",
+  "evidence_levels": {
+    "fulltext_verified": "全文可用且已核验相关内容；未读部分不能外推。",
+    "official_scope_status_only": "仅官方公开范围、版次及状态；具体条款、定义、公式待全文。",
+    "engineering_mapping": "本技能提出的功能/概念映射，不表示标准等同或规范性要求。"
+  },
+  "rules": [
+    "所有跨标准功能/概念关联均标engineering_mapping，条款具体证据分别标注。",
+    "GJB编号与MIL编号独立；mil_task_crosswalk不是同号配对或等效声明。",
+    "Active状态不自动赋予规范性强制力；MIL2165封面为指导用途。",
+    "IEEE标准、ISO标准及其他仅范围/状态来源不能生成未经核验的具体条款。",
+    "已撤销/非活跃/取消/在研状态须随引用展示；需要当前状态结论时重新核验官方来源。"
+  ],
+  "standards": [
+    {
+      "canonical_id": "GJB-2547B-2024",
+      "aliases": [
+        "GJB 2547B-2024",
+        "GJB2547B-2024",
+        "GJB 2547B",
+        "GJB2547B",
+        "GJB2547",
+        "装备测试性工作通用要求"
+      ],
+      "title": "装备测试性工作通用要求",
+      "edition": "2024",
+      "status": "edition_on_file_current_status_not_independently_verified",
+      "status_checked_at": "2026-10-15",
+      "officialURL": null,
+      "evidence_level": "fulltext_verified",
+      "fulltext": {
+        "availability": "bundled",
+        "local_paths": [
+          "assets/gjb2547b-2024.pdf"
+        ],
+        "reviewed_scope": "60页扫描全文可用；关键条款、20项目、矩阵、公式及疑义已校核",
+        "note": "正文/资料性指南/工程建议须分开；原扫描的来源与哈希见resources/00-来源与使用边界.md"
+      },
+      "applicable_topics": [
+        "测试性工作体系",
+        "测试性要求",
+        "指标",
+        "诊断设计",
+        "验证证据",
+        "领域模型参考",
+        "统一语言参考"
+      ],
+      "gjb_work_items": [
+        101,
+        102,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        401,
+        402,
+        403,
+        501,
+        502
+      ],
+      "mapping_evidence": "engineering_mapping",
+      "notes": [
+        "2024-07-05发布、2024-10-01实施；替代GJB 2547A-2012。",
+        "officialURL为空：已取得扫描正文，未取得官方公开发布目录链接；不得将公开转载下载渠道标为官方。",
+        "适用版本仍须结合合同；附录示例值不构成通用门限。"
+      ]
+    },
+    {
+      "canonical_id": "MIL-HDBK-2165",
+      "aliases": [
+        "MIL-HDBK-2165-1995",
+        "MIL HDBK 2165",
+        "MILHDBK2165",
+        "MIL2165",
+        "MIL-HDBK2165",
+        "2165"
+      ],
+      "title": "Testability Handbook for Systems and Equipment",
+      "edition": "1995-07-31；Notice 3 2024-06-11",
+      "status": "Active",
+      "status_checked_at": "2026-10-15",
+      "officialURL": "https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=121172",
+      "evidence_level": "fulltext_verified",
+      "fulltext": {
+        "availability": "bundled",
+        "local_paths": [
+          "assets/mil-hdbk-2165-1995.pdf",
+          "assets/mil-hdbk-2165-notice3-2024.pdf"
+        ],
+        "reviewed_scope": "1995正文127页和2024确认通知1页可用；已核验封面、目录、任务体系和关键定位",
+        "note": "不表示已逐字校核127页；精确条文引用须回看相关页。"
+      },
+      "applicable_topics": [
+        "测试性工作规划",
+        "测试性评审",
+        "诊断概念",
+        "测试性要求",
+        "固有测试性",
+        "测试设计",
+        "模型与诊断"
+      ],
+      "gjb_work_items": [
+        101,
+        102,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        401,
+        402,
+        403
+      ],
+      "mapping_evidence": "engineering_mapping",
+      "notes": [
+        "封面明确为指导用途，不能作为要求引用；历史MIL-STD-2165A页眉及措辞不能覆盖封面声明。",
+        "2024年Notice 3为有效性确认，不是重新编写的2024版正文。",
+        "MIL五任务和GJB二十项目仅作功能映射，编号不得相互套用；GJB501/502无独立一对一MIL任务。"
+      ]
+    },
+    {
+      "canonical_id": "IEEE-1522-2004",
+      "aliases": [
+        "IEEE 1522-2004",
+        "IEEE1522-2004",
+        "IEEE 1522",
+        "IEEE1522",
+        "1522"
+      ],
+      "title": "Testability and Diagnosability Characteristics and Metrics",
+      "edition": "2004",
+      "status": "Inactive-Withdrawn",
+      "status_checked_at": "2026-10-15",
+      "officialURL": "https://standards.ieee.org/ieee/1522/2264/",
+      "evidence_level": "official_scope_status_only",
+      "fulltext": {
+        "availability": "not_obtained",
+        "local_paths": [],
+        "reviewed_scope": "官方公开范围、版本与状态；未核验标准全文、正式定义、具体条款或公式",
+        "note": "通过合法购买、机构订阅或图书馆取得适用版本后再开展逐条对照"
+      },
+      "applicable_topics": [
+        "测试性",
+        "可诊断性",
+        "指标定义",
+        "故障集合",
+        "统一语言候选"
+      ],
+      "gjb_work_items": [
+        101,
+        303,
+        304,
+        402,
+        403
+      ],
+      "mapping_evidence": "engineering_mapping",
+      "notes": [
+        "2010-01-09撤销；作为历史和方法研究，不作为现行Active标准。",
+        "本技能不据摘要生成IEEE正式定义、公式或门限。"
+      ]
+    },
+    {
+      "canonical_id": "IEEE-1232-2010",
+      "aliases": [
+        "IEEE 1232-2010",
+        "IEEE1232-2010",
+        "IEEE 1232",
+        "IEEE1232",
+        "AI-ESTATE",
+        "AIESTATE"
+      ],
+      "title": "Artificial Intelligence Exchange and Service Tie to All Test Environments (AI-ESTATE)",
+      "edition": "2010",
+      "status": "Inactive-Reserved",
+      "status_checked_at": "2026-10-15",
+      "officialURL": "https://standards.ieee.org/ieee/1232/3896/",
+      "evidence_level": "official_scope_status_only",
+      "fulltext": {
+        "availability": "not_obtained",
+        "local_paths": [],
+        "reviewed_scope": "官方公开范围、版本与状态；未核验标准全文、正式定义、具体条款或公式",
+        "note": "通过合法购买、机构订阅或图书馆取得适用版本后再开展逐条对照"
+      },
+      "applicable_topics": [
+        "诊断知识模型",
+        "诊断信息交换",
+        "诊断推理服务",
+        "领域模型参考",
+        "统一语言候选"
+      ],
+      "gjb_work_items": [
+        302,
+        306
+      ],
+      "mapping_evidence": "engineering_mapping",
+      "notes": [
+        "2021-03-25转为Inactive-Reserved；不同于Inactive-Withdrawn。",
+        "修订项目IEEE-P1232不是已出版替代标准。"
+      ]
+    },
+    {
+      "canonical_id": "IEEE-P1232",
+      "aliases": [
+        "P1232",
+        "IEEE P1232",
+        "IEEE-P1232",
+        "AI-ESTATE修订项目"
+      ],
+      "title": "AI-ESTATE revision project",
+      "edition": "PAR approved 2024-11-12",
+      "status": "Active PAR",
+      "status_checked_at": "2026-10-15",
+      "officialURL": "https://standards.ieee.org/ieee/1232/11854/",
+      "evidence_level": "official_scope_status_only",
+      "fulltext": {
+        "availability": "not_obtained",
+        "local_paths": [],
+        "reviewed_scope": "官方公开范围、版本与状态；未核验标准全文、正式定义、具体条款或公式",
+        "note": "通过合法购买、机构订阅或图书馆取得适用版本后再开展逐条对照"
+      },
+      "applicable_topics": [
+        "诊断模型修订方向",
+        "系统诊断数据与服务"
+      ],
+      "gjb_work_items": [
+        302,
+        306
+      ],
+      "mapping_evidence": "engineering_mapping",
+      "notes": [
+        "在研项目；不得命名为IEEE1232-2024已出版标准。"
+      ]
+    },
+    {
+      "canonical_id": "IEEE-1636-2018",
+      "aliases": [
+        "IEEE 1636-2018",
+        "IEEE1636-2018",
+        "IEEE 1636",
+        "IEEE1636",
+        "SIMICA"
+      ],
+      "title": "Software Interface for Maintenance Information Collection and Analysis (SIMICA)",
+      "edition": "2018",
+      "status": "Active",
+      "status_checked_at": "2026-10-15",
+      "officialURL": "https://standards.ieee.org/ieee/1636/6679/",
+      "evidence_level": "official_scope_status_only",
+      "fulltext": {
+        "availability": "not_obtained",
+        "local_paths": [],
+        "reviewed_scope": "官方公开范围、版本与状态；未核验标准全文、正式定义、具体条款或公式",
+        "note": "通过合法购买、机构订阅或图书馆取得适用版本后再开展逐条对照"
+      },
+      "applicable_topics": [
+        "维护信息公共模型",
+        "测试数据交换",
+        "数据闭环",
+        "证据模型"
+      ],
+      "gjb_work_items": [
+        205,
+        206,
+        401,
+        402,
+        403,
+        501,
+        502
+      ],
+      "mapping_evidence": "engineering_mapping",
+      "notes": []
+    },
+    {
+      "canonical_id": "IEEE-1636.1-2018",
+      "aliases": [
+        "IEEE 1636.1-2018",
+        "IEEE1636.1-2018",
+        "IEEE 1636.1",
+        "IEEE1636.1",
+        "SIMICA测试结果"
+      ],
+      "title": "SIMICA: Exchanging Test Results and Session Information",
+      "edition": "2018",
+      "status": "Active",
+      "status_checked_at": "2026-10-15",
+      "officialURL": "https://standards.ieee.org/ieee/1636.1/6947/",
+      "evidence_level": "official_scope_status_only",
+      "fulltext": {
+        "availability": "not_obtained",
+        "local_paths": [],
+        "reviewed_scope": "官方公开范围、版本与状态；未核验标准全文、正式定义、具体条款或公式",
+        "note": "通过合法购买、机构订阅或图书馆取得适用版本后再开展逐条对照"
+      },
+      "applicable_topics": [
+        "测试结果",
+        "测试会话",
+        "数据交换",
+        "证据模型"
+      ],
+      "gjb_work_items": [
+        205,
+        401,
+        402,
+        403,
+        501
+      ],
+      "mapping_evidence": "engineering_mapping",
+      "notes": [
+        "应同时考虑IEEE-1636.1-2018-COR1-2023勘误；本技能未核验两者全文。"
+      ]
+    },
+    {
+      "canonical_id": "IEEE-1636.1-2018-COR1-2023",
+      "aliases": [
+        "IEEE 1636.1-2018/Cor1-2023",
+        "IEEE 1636.1-2018 Cor 1-2023",
+        "IEEE 1636.1 Cor1",
+        "IEEE1636.1 Cor1",
+        "1636.1-2018_Cor_1"
+      ],
+      "title": "Corrigendum 1 to IEEE 1636.1-2018",
+      "edition": "Cor 1-2023",
+      "status": "Active",
+      "status_checked_at": "2026-10-15",
+      "officialURL": "https://standards.ieee.org/ieee/1636.1-2018_Cor_1/7645/",
+      "evidence_level": "official_scope_status_only",
+      "fulltext": {
+        "availability": "not_obtained",
+        "local_paths": [],
+        "reviewed_scope": "官方公开范围、版本与状态；未核验标准全文、正式定义、具体条款或公式",
+        "note": "通过合法购买、机构订阅或图书馆取得适用版本后再开展逐条对照"
+      },
+      "applicable_topics": [
+        "测试结果勘误",
+        "会话数据勘误"
+      ],
+      "gjb_work_items": [
+        205,
+        401,
+        402,
+        403,
+        501
+      ],
+      "mapping_evidence": "engineering_mapping",
+      "notes": [
+        "作为2018正文的勘误组合使用，不作为独立替代正文。"
+      ]
+    },
+    {
+      "canonical_id": "IEEE-1636.2-2018",
+      "aliases": [
+        "IEEE 1636.2-2018",
+        "IEEE1636.2-2018",
+        "IEEE 1636.2",
+        "IEEE1636.2",
+        "SIMICA维修行动"
+      ],
+      "title": "SIMICA: Exchanging Maintenance Action Information",
+      "edition": "2018",
+      "status": "Active",
+      "status_checked_at": "2026-10-15",
+      "officialURL": "https://standards.ieee.org/ieee/1636.2/5766/",
+      "evidence_level": "official_scope_status_only",
+      "fulltext": {
+        "availability": "not_obtained",
+        "local_paths": [],
+        "reviewed_scope": "官方公开范围、版本与状态；未核验标准全文、正式定义、具体条款或公式",
+        "note": "通过合法购买、机构订阅或图书馆取得适用版本后再开展逐条对照"
+      },
+      "applicable_topics": [
+        "维修行动",
+        "维护数据",
+        "信息交换",
+        "改进闭环"
+      ],
+      "gjb_work_items": [
+        205,
+        206,
+        501,
+        502
+      ],
+      "mapping_evidence": "engineering_mapping",
+      "notes": []
+    },
+    {
+      "canonical_id": "IEEE-1012-2024",
+      "aliases": [
+        "IEEE 1012-2024",
+        "IEEE1012-2024",
+        "IEEE 1012",
+        "IEEE1012",
+        "系统软件硬件验证与确认"
+      ],
+      "title": "System, Software, and Hardware Verification and Validation",
+      "edition": "2024；published 2025-08-22",
+      "status": "Active",
+      "status_checked_at": "2026-10-15",
+      "officialURL": "https://standards.ieee.org/ieee/1012/7324/",
+      "evidence_level": "official_scope_status_only",
+      "fulltext": {
+        "availability": "not_obtained",
+        "local_paths": [],
+        "reviewed_scope": "官方公开范围、版本与状态；未核验标准全文、正式定义、具体条款或公式",
+        "note": "通过合法购买、机构订阅或图书馆取得适用版本后再开展逐条对照"
+      },
+      "applicable_topics": [
+        "系统V&V",
+        "软件V&V",
+        "硬件V&V",
+        "规定要求",
+        "预期使用",
+        "用户需求",
+        "验证证据",
+        "验证设计"
+      ],
+      "gjb_work_items": [
+        101,
+        204,
+        307,
+        401,
+        402,
+        403
+      ],
+      "mapping_evidence": "engineering_mapping",
+      "notes": [
+        "2024-11-12批准；2025-08-22出版，版号仍为2024。",
+        "公开范围涉及analysis/evaluation/review/inspection/assessment/testing；不据摘要声称完整实施流程或具体交付物要求。"
+      ]
+    },
+    {
+      "canonical_id": "ISO-IEC-IEEE-29119-1-2022",
+      "aliases": [
+        "ISO/IEC/IEEE 29119-1:2022",
+        "ISO IEC IEEE 29119-1 2022",
+        "ISO/IEC/IEEE 29119-1",
+        "IEEE 29119-1",
+        "29119-1",
+        "软件测试一般概念"
+      ],
+      "title": "Software and systems engineering — Software testing — Part 1: General concepts",
+      "edition": "2022；edition 2",
+      "status": "Published (stage 60.60)",
+      "status_checked_at": "2026-10-15",
+      "officialURL": "https://www.iso.org/standard/81291.html",
+      "evidence_level": "official_scope_status_only",
+      "fulltext": {
+        "availability": "not_obtained",
+        "local_paths": [],
+        "reviewed_scope": "官方公开范围、版本与状态；未核验标准全文、正式定义、具体条款或公式",
+        "note": "通过合法购买、机构订阅或图书馆取得适用版本后再开展逐条对照"
+      },
+      "applicable_topics": [
+        "软件测试概念",
+        "测试设计",
+        "软件统一语言参考"
+      ],
+      "gjb_work_items": [],
+      "mapping_evidence": "engineering_mapping",
+      "notes": [
+        "官方详情页标价0不表示本技能已经取得或核验标准全文。"
+      ]
+    },
+    {
+      "canonical_id": "ISO-IEC-IEEE-29148-2018",
+      "aliases": [
+        "ISO/IEC/IEEE 29148:2018",
+        "ISO IEC IEEE 29148 2018",
+        "ISO/IEC/IEEE 29148",
+        "IEEE 29148",
+        "29148",
+        "需求工程"
+      ],
+      "title": "Systems and software engineering — Life cycle processes — Requirements engineering",
+      "edition": "2018",
+      "status": "Published; confirmed 2024; revision pending (stage 90.92)",
+      "status_checked_at": "2026-10-15",
+      "officialURL": "https://www.iso.org/standard/72089.html",
+      "evidence_level": "official_scope_status_only",
+      "fulltext": {
+        "availability": "not_obtained",
+        "local_paths": [],
+        "reviewed_scope": "官方公开范围、版本与状态；未核验标准全文、正式定义、具体条款或公式",
+        "note": "通过合法购买、机构订阅或图书馆取得适用版本后再开展逐条对照"
+      },
+      "applicable_topics": [
+        "需求工程",
+        "需求质量",
+        "可验证性",
+        "需求追踪",
+        "领域模型参考",
+        "统一语言参考"
+      ],
+      "gjb_work_items": [
+        101,
+        102,
+        301
+      ],
+      "mapping_evidence": "engineering_mapping",
+      "notes": [
+        "2024年确认；修订在研，不将DIS视为已出版替代版本。"
+      ]
+    },
+    {
+      "canonical_id": "ISO-IEC-IEEE-DIS-29148",
+      "aliases": [
+        "ISO/IEC/IEEE DIS 29148",
+        "ISO IEC IEEE DIS 29148",
+        "DIS 29148",
+        "29148修订项目"
+      ],
+      "title": "Requirements engineering revision draft project",
+      "edition": "DIS revision project",
+      "status": "Under development (draft; not a published replacement)",
+      "status_checked_at": "2026-10-15",
+      "officialURL": "https://www.iso.org/standard/94091.html",
+      "evidence_level": "official_scope_status_only",
+      "fulltext": {
+        "availability": "not_obtained",
+        "local_paths": [],
+        "reviewed_scope": "官方公开范围、版本与状态；未核验标准全文、正式定义、具体条款或公式",
+        "note": "通过合法购买、机构订阅或图书馆取得适用版本后再开展逐条对照"
+      },
+      "applicable_topics": [
+        "需求工程修订方向"
+      ],
+      "gjb_work_items": [
+        101,
+        102,
+        301
+      ],
+      "mapping_evidence": "engineering_mapping",
+      "notes": [
+        "仅跟踪修订方向；实施依据仍需项目指定适用版本。"
+      ]
+    },
+    {
+      "canonical_id": "MIL-HDBK-470A",
+      "aliases": [
+        "MIL-HDBK-470A-1997",
+        "MIL HDBK 470A",
+        "MILHDBK470A",
+        "MIL470A",
+        "MIL-HDBK470A"
+      ],
+      "title": "Designing and Developing Maintainable Products and Systems (supplementary reference)",
+      "edition": "A；1997-08-04；Notice 3 2024-08-21",
+      "status": "Active",
+      "status_checked_at": "2026-10-15",
+      "officialURL": "https://quicksearch.dla.mil/qaDocDetails.aspx?ident_number=120647",
+      "evidence_level": "official_scope_status_only",
+      "fulltext": {
+        "availability": "not_obtained",
+        "local_paths": [],
+        "reviewed_scope": "官方公开范围、版本与状态；未核验标准全文、正式定义、具体条款或公式",
+        "note": "通过合法购买、机构订阅或图书馆取得适用版本后再开展逐条对照"
+      },
+      "applicable_topics": [
+        "维修性",
+        "系统工程接口",
+        "设计分析",
+        "保障接口"
+      ],
+      "gjb_work_items": [
+        301,
+        305
+      ],
+      "mapping_evidence": "engineering_mapping",
+      "notes": [
+        "2024-08-21 Notice 3为有效性确认；未下载719页全文。"
+      ]
+    },
+    {
+      "canonical_id": "IEEE-1641-2022",
+      "aliases": [
+        "IEEE 1641-2022",
+        "IEEE1641-2022",
+        "IEEE 1641",
+        "IEEE1641",
+        "1641",
+        "Signal and Test Definition"
+      ],
+      "title": "Signal and Test Definition",
+      "edition": "2022；published 2023-02-10",
+      "status": "Active",
+      "status_checked_at": "2026-10-15",
+      "officialURL": "https://standards.ieee.org/ieee/1641/6948/",
+      "evidence_level": "official_scope_status_only",
+      "fulltext": {
+        "availability": "not_obtained",
+        "local_paths": [],
+        "reviewed_scope": "官方公开范围、版本与状态；未核验标准全文、正式定义、具体条款或公式",
+        "note": "通过合法购买、机构订阅或图书馆取得适用版本后再开展逐条对照"
+      },
+      "applicable_topics": [
+        "测试信号",
+        "信号数学定义",
+        "测试描述",
+        "自动测试互操作"
+      ],
+      "gjb_work_items": [
+        306
+      ],
+      "mapping_evidence": "engineering_mapping",
+      "notes": [
+        "对普通软件测试的适用性需判断；不能把信号标准泛化成全部软件用例规范。"
+      ]
+    },
+    {
+      "canonical_id": "MIL-HDBK-1814",
+      "aliases": [
+        "MIL HDBK 1814",
+        "MILHDBK1814",
+        "MIL1814",
+        "MIL-HDBK1814",
+        "Integrated Diagnostics"
+      ],
+      "title": "Integrated Diagnostics (historical reference)",
+      "edition": "Historical edition; edition not independently verified",
+      "status": "Canceled",
+      "status_checked_at": "2026-10-15",
+      "officialURL": "https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=214168",
+      "evidence_level": "official_scope_status_only",
+      "fulltext": {
+        "availability": "not_obtained",
+        "local_paths": [],
+        "reviewed_scope": "官方公开范围、版本与状态；未核验标准全文、正式定义、具体条款或公式",
+        "note": "通过合法购买、机构订阅或图书馆取得适用版本后再开展逐条对照"
+      },
+      "applicable_topics": [
+        "综合诊断历史参考"
+      ],
+      "gjb_work_items": [],
+      "mapping_evidence": "engineering_mapping",
+      "notes": [
+        "2023-02-02取消；No S/S Document；不列入现行主对照组合。"
+      ]
+    }
+  ],
+  "mil_task_crosswalk": [
+    {
+      "mil_task": 101,
+      "title": "Testability Program Planning",
+      "pdf_pages": [
+        10,
+        11
+      ],
+      "gjb_work_items": [
+        102,
+        201,
+        202,
+        203,
+        205,
+        206
+      ],
+      "relationship": "related_function",
+      "evidence_type": "engineering_mapping"
+    },
+    {
+      "mil_task": 102,
+      "title": "Testability Reviews",
+      "pdf_pages": [
+        12,
+        13
+      ],
+      "gjb_work_items": [
+        204,
+        307,
+        401,
+        402,
+        403
+      ],
+      "relationship": "related_function",
+      "evidence_type": "engineering_mapping"
+    },
+    {
+      "mil_task": 201,
+      "title": "Diagnostic Concepts and Testability Requirements",
+      "pdf_pages": [
+        15,
+        16
+      ],
+      "gjb_work_items": [
+        101,
+        301,
+        303
+      ],
+      "relationship": "related_function",
+      "evidence_type": "engineering_mapping"
+    },
+    {
+      "mil_task": 202,
+      "title": "Inherent Testability Design and Assessment",
+      "pdf_pages": [
+        17,
+        18
+      ],
+      "gjb_work_items": [
+        301,
+        302,
+        303,
+        304,
+        305,
+        307
+      ],
+      "relationship": "related_function",
+      "evidence_type": "engineering_mapping"
+    },
+    {
+      "mil_task": 203,
+      "title": "Test Design and Assessment",
+      "pdf_pages": [
+        19,
+        20,
+        21
+      ],
+      "gjb_work_items": [
+        205,
+        206,
+        302,
+        304,
+        306,
+        307,
+        401,
+        402,
+        403
+      ],
+      "relationship": "related_function",
+      "evidence_type": "engineering_mapping"
+    }
+  ],
+  "software_reference_order": [
+    "ISO-IEC-IEEE-29148-2018",
+    "ISO-IEC-IEEE-29119-1-2022",
+    "IEEE-1012-2024",
+    "GJB-2547B-2024",
+    "MIL-HDBK-2165"
+  ],
+  "comparison_resource": "resources/09-多标准对照.md"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "llm",
+  "description": "Personal knowledge, workflows, and testing and verification design for AI agents.",
+  "owner": {
+    "name": "hhhh618"
+  },
+  "plugins": [
+    {
+      "name": "llm",
+      "source": "./",
+      "description": "Personal knowledge, workflows, and testing and verification design."
+    }
+  ]
+}

@@ -1,0 +1,561 @@
+{
+  "standard": "GJB 2547B-2024",
+  "edition": "2024",
+  "work_item_count": 20,
+  "stage_note": "√适用、△有选择地应用、×不适用；表A.1为资料性指南，不能替代合同剪裁，也不构成脱离项目背景的绝对禁止。",
+  "items": [
+    {
+      "id": 101,
+      "name": "确定测试性要求",
+      "clause": "5.1",
+      "pdf_pages": [
+        11,
+        12
+      ],
+      "printed_pages": [
+        6,
+        7
+      ],
+      "resource": "resources/02-要求与剪裁.md",
+      "stage_guidance": {
+        "立项论证": "√",
+        "工程研制": "√",
+        "鉴定定型": "×",
+        "生产与使用保障": "×"
+      },
+      "stage_source": {
+        "classification": "资料性指南",
+        "clause": "A.3 表A.1",
+        "pdf_pages": [
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": 102,
+      "name": "确定测试性工作项目要求",
+      "clause": "5.2",
+      "pdf_pages": [
+        12
+      ],
+      "printed_pages": [
+        7,
+        7
+      ],
+      "resource": "resources/02-要求与剪裁.md",
+      "stage_guidance": {
+        "立项论证": "√",
+        "工程研制": "√",
+        "鉴定定型": "×",
+        "生产与使用保障": "×"
+      },
+      "stage_source": {
+        "classification": "资料性指南",
+        "clause": "A.3 表A.1",
+        "pdf_pages": [
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": 201,
+      "name": "制定测试性计划",
+      "clause": "6.1",
+      "pdf_pages": [
+        13
+      ],
+      "printed_pages": [
+        8,
+        8
+      ],
+      "resource": "resources/03-测试性管理.md",
+      "stage_guidance": {
+        "立项论证": "√",
+        "工程研制": "√",
+        "鉴定定型": "△",
+        "生产与使用保障": "△"
+      },
+      "stage_source": {
+        "classification": "资料性指南",
+        "clause": "A.3 表A.1",
+        "pdf_pages": [
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": 202,
+      "name": "制定测试性工作计划",
+      "clause": "6.2",
+      "pdf_pages": [
+        13,
+        14
+      ],
+      "printed_pages": [
+        8,
+        9
+      ],
+      "resource": "resources/03-测试性管理.md",
+      "stage_guidance": {
+        "立项论证": "△",
+        "工程研制": "√",
+        "鉴定定型": "△",
+        "生产与使用保障": "△"
+      },
+      "stage_source": {
+        "classification": "资料性指南",
+        "clause": "A.3 表A.1",
+        "pdf_pages": [
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": 203,
+      "name": "对承制方、转承制方的监督和控制",
+      "clause": "6.3",
+      "pdf_pages": [
+        14,
+        15
+      ],
+      "printed_pages": [
+        9,
+        10
+      ],
+      "resource": "resources/03-测试性管理.md",
+      "stage_guidance": {
+        "立项论证": "△",
+        "工程研制": "√",
+        "鉴定定型": "√",
+        "生产与使用保障": "√"
+      },
+      "stage_source": {
+        "classification": "资料性指南",
+        "clause": "A.3 表A.1",
+        "pdf_pages": [
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": 204,
+      "name": "测试性评审",
+      "clause": "6.4",
+      "pdf_pages": [
+        15,
+        16
+      ],
+      "printed_pages": [
+        10,
+        11
+      ],
+      "resource": "resources/03-测试性管理.md",
+      "stage_guidance": {
+        "立项论证": "√",
+        "工程研制": "√",
+        "鉴定定型": "√",
+        "生产与使用保障": "√"
+      },
+      "stage_source": {
+        "classification": "资料性指南",
+        "clause": "A.3 表A.1",
+        "pdf_pages": [
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": 205,
+      "name": "测试性数据收集、分析和管理",
+      "clause": "6.5",
+      "pdf_pages": [
+        16,
+        17
+      ],
+      "printed_pages": [
+        11,
+        12
+      ],
+      "resource": "resources/03-测试性管理.md",
+      "stage_guidance": {
+        "立项论证": "×",
+        "工程研制": "√",
+        "鉴定定型": "√",
+        "生产与使用保障": "√"
+      },
+      "stage_source": {
+        "classification": "资料性指南",
+        "clause": "A.3 表A.1",
+        "pdf_pages": [
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": 206,
+      "name": "测试性增长管理",
+      "clause": "6.6",
+      "pdf_pages": [
+        17
+      ],
+      "printed_pages": [
+        12,
+        12
+      ],
+      "resource": "resources/03-测试性管理.md",
+      "stage_guidance": {
+        "立项论证": "×",
+        "工程研制": "√",
+        "鉴定定型": "√",
+        "生产与使用保障": "√"
+      },
+      "stage_source": {
+        "classification": "资料性指南",
+        "clause": "A.3 表A.1",
+        "pdf_pages": [
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": 301,
+      "name": "测试性设计方案制定",
+      "clause": "7.1",
+      "pdf_pages": [
+        17,
+        18
+      ],
+      "printed_pages": [
+        12,
+        13
+      ],
+      "resource": "resources/04-设计与分析.md",
+      "stage_guidance": {
+        "立项论证": "△",
+        "工程研制": "√",
+        "鉴定定型": "×",
+        "生产与使用保障": "×"
+      },
+      "stage_source": {
+        "classification": "资料性指南",
+        "clause": "A.3 表A.1",
+        "pdf_pages": [
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": 302,
+      "name": "测试性模型建立",
+      "clause": "7.2",
+      "pdf_pages": [
+        18,
+        19
+      ],
+      "printed_pages": [
+        13,
+        14
+      ],
+      "resource": "resources/04-设计与分析.md",
+      "stage_guidance": {
+        "立项论证": "△",
+        "工程研制": "√",
+        "鉴定定型": "△",
+        "生产与使用保障": "△"
+      },
+      "stage_source": {
+        "classification": "资料性指南",
+        "clause": "A.3 表A.1",
+        "pdf_pages": [
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": 303,
+      "name": "测试性分配",
+      "clause": "7.3",
+      "pdf_pages": [
+        19
+      ],
+      "printed_pages": [
+        14,
+        14
+      ],
+      "resource": "resources/04-设计与分析.md",
+      "stage_guidance": {
+        "立项论证": "×",
+        "工程研制": "√",
+        "鉴定定型": "×",
+        "生产与使用保障": "×"
+      },
+      "stage_source": {
+        "classification": "资料性指南",
+        "clause": "A.3 表A.1",
+        "pdf_pages": [
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": 304,
+      "name": "测试性预计",
+      "clause": "7.4",
+      "pdf_pages": [
+        20
+      ],
+      "printed_pages": [
+        15,
+        15
+      ],
+      "resource": "resources/04-设计与分析.md",
+      "stage_guidance": {
+        "立项论证": "△",
+        "工程研制": "√",
+        "鉴定定型": "√",
+        "生产与使用保障": "△"
+      },
+      "stage_source": {
+        "classification": "资料性指南",
+        "clause": "A.3 表A.1",
+        "pdf_pages": [
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": 305,
+      "name": "测试性设计准则制定",
+      "clause": "7.5",
+      "pdf_pages": [
+        20,
+        21
+      ],
+      "printed_pages": [
+        15,
+        16
+      ],
+      "resource": "resources/04-设计与分析.md",
+      "stage_guidance": {
+        "立项论证": "△",
+        "工程研制": "√",
+        "鉴定定型": "△",
+        "生产与使用保障": "×"
+      },
+      "stage_source": {
+        "classification": "资料性指南",
+        "clause": "A.3 表A.1",
+        "pdf_pages": [
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": 306,
+      "name": "诊断设计",
+      "clause": "7.6",
+      "pdf_pages": [
+        21,
+        22
+      ],
+      "printed_pages": [
+        16,
+        17
+      ],
+      "resource": "resources/04-设计与分析.md",
+      "stage_guidance": {
+        "立项论证": "×",
+        "工程研制": "√",
+        "鉴定定型": "△",
+        "生产与使用保障": "△"
+      },
+      "stage_source": {
+        "classification": "资料性指南",
+        "clause": "A.3 表A.1",
+        "pdf_pages": [
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": 307,
+      "name": "测试性设计核查",
+      "clause": "7.7",
+      "pdf_pages": [
+        22,
+        23
+      ],
+      "printed_pages": [
+        17,
+        18
+      ],
+      "resource": "resources/04-设计与分析.md",
+      "stage_guidance": {
+        "立项论证": "×",
+        "工程研制": "√",
+        "鉴定定型": "√",
+        "生产与使用保障": "×"
+      },
+      "stage_source": {
+        "classification": "资料性指南",
+        "clause": "A.3 表A.1",
+        "pdf_pages": [
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": 401,
+      "name": "测试性试验",
+      "clause": "8.1",
+      "pdf_pages": [
+        23
+      ],
+      "printed_pages": [
+        18,
+        18
+      ],
+      "resource": "resources/05-试验与评价.md",
+      "stage_guidance": {
+        "立项论证": "×",
+        "工程研制": "√",
+        "鉴定定型": "√",
+        "生产与使用保障": "×"
+      },
+      "stage_source": {
+        "classification": "资料性指南",
+        "clause": "A.3 表A.1",
+        "pdf_pages": [
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": 402,
+      "name": "测试性分析评价",
+      "clause": "8.2",
+      "pdf_pages": [
+        23,
+        24
+      ],
+      "printed_pages": [
+        18,
+        19
+      ],
+      "resource": "resources/05-试验与评价.md",
+      "stage_guidance": {
+        "立项论证": "×",
+        "工程研制": "√",
+        "鉴定定型": "√",
+        "生产与使用保障": "×"
+      },
+      "stage_source": {
+        "classification": "资料性指南",
+        "clause": "A.3 表A.1",
+        "pdf_pages": [
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": 403,
+      "name": "测试性评估",
+      "clause": "8.3",
+      "pdf_pages": [
+        24,
+        25
+      ],
+      "printed_pages": [
+        19,
+        20
+      ],
+      "resource": "resources/05-试验与评价.md",
+      "stage_guidance": {
+        "立项论证": "×",
+        "工程研制": "△",
+        "鉴定定型": "√",
+        "生产与使用保障": "√"
+      },
+      "stage_source": {
+        "classification": "资料性指南",
+        "clause": "A.3 表A.1",
+        "pdf_pages": [
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": 501,
+      "name": "使用期间测试性信息收集",
+      "clause": "9.1",
+      "pdf_pages": [
+        25,
+        26
+      ],
+      "printed_pages": [
+        20,
+        21
+      ],
+      "resource": "resources/06-使用与改进.md",
+      "stage_guidance": {
+        "立项论证": "×",
+        "工程研制": "×",
+        "鉴定定型": "×",
+        "生产与使用保障": "√"
+      },
+      "stage_source": {
+        "classification": "资料性指南",
+        "clause": "A.3 表A.1",
+        "pdf_pages": [
+          27,
+          28
+        ]
+      }
+    },
+    {
+      "id": 502,
+      "name": "使用期间测试性改进",
+      "clause": "9.2",
+      "pdf_pages": [
+        26
+      ],
+      "printed_pages": [
+        21,
+        21
+      ],
+      "resource": "resources/06-使用与改进.md",
+      "stage_guidance": {
+        "立项论证": "×",
+        "工程研制": "×",
+        "鉴定定型": "×",
+        "生产与使用保障": "√"
+      },
+      "stage_source": {
+        "classification": "资料性指南",
+        "clause": "A.3 表A.1",
+        "pdf_pages": [
+          27,
+          28
+        ]
+      }
+    }
+  ]
+}

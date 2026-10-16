@@ -1,0 +1,333 @@
+{
+  "schema_version": "1.0",
+  "skill_version": "2.1.0",
+  "definition_status": "engineering_working_definitions_not_verbatim_standard_terms",
+  "project_override": "保留项目已确认词汇与上下文，映射差异，不直接重命名外部契约",
+  "terms": [
+    {
+      "canonical_name": "Requirement",
+      "label_zh": "需求",
+      "label_en": "Requirement",
+      "aliases": [
+        "要求"
+      ],
+      "context": "需求",
+      "definition": "产品能力、质量或约束的版本化陈述",
+      "constraints": "带来源；实现现状不自动成为需求",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "Verification",
+      "label_zh": "验证",
+      "label_en": "Verification",
+      "aliases": [],
+      "context": "设计/评价",
+      "definition": "评价是否满足规定要求",
+      "constraints": "包括分析、检查、演示、测试；不等于仅运行测试",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "Validation",
+      "label_zh": "确认",
+      "label_en": "Validation",
+      "aliases": [],
+      "context": "产品/评价",
+      "definition": "在使用情境下评价预期用途与用户需要",
+      "constraints": "不等于审批；“结果确认”依项目原义",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "Test",
+      "label_zh": "测试",
+      "label_en": "Test",
+      "aliases": [],
+      "context": "设计/执行",
+      "definition": "约定条件下施加输入/观察行为并记录结果",
+      "constraints": "是验证方法之一；不等于测试性",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "TestDesign",
+      "label_zh": "测试设计",
+      "label_en": "Test design",
+      "aliases": [],
+      "context": "设计",
+      "definition": "依据需求、风险和模型确定条件、覆盖策略、判据和设计关系",
+      "constraints": "是设计活动/产物，不等于用例执行或结果",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "VerificationObjective",
+      "label_zh": "验证目标",
+      "label_en": "Verification objective",
+      "aliases": [],
+      "context": "设计/评价",
+      "definition": "明确要证明的要求或预期用途及其评价范围",
+      "constraints": "目标类型区分verification与validation，不将确认目标隐式改为要求符合性",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "EngineeringTrial",
+      "label_zh": "试验",
+      "label_en": "Experiment/Trial",
+      "aliases": [],
+      "context": "试验设计",
+      "definition": "有目的、对象、条件与方案的工程活动",
+      "constraints": "装备试验沿原标准术语；不强译所有Test",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "Scenario",
+      "label_zh": "场景",
+      "label_en": "Scenario",
+      "aliases": [],
+      "context": "产品/设计",
+      "definition": "角色情境中的事件序列",
+      "constraints": "包含异常路径；不自动成为可执行用例",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "TestCase",
+      "label_zh": "用例",
+      "label_en": "Test case",
+      "aliases": [
+        "测试用例"
+      ],
+      "context": "设计",
+      "definition": "前置、输入、操作、预期和判据的设计项",
+      "constraints": "业务用例用BusinessUseCase，避免统称Case",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "TestProcedure",
+      "label_zh": "规程",
+      "label_en": "Test procedure",
+      "aliases": [
+        "测试程序"
+      ],
+      "context": "设计",
+      "definition": "步骤、工具、采集及恢复方法",
+      "constraints": "脚本为实现/附件；脚本名不证明规程完整",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "VerificationPlan",
+      "label_zh": "验证计划",
+      "label_en": "Verification plan",
+      "aliases": [],
+      "context": "管理",
+      "definition": "范围、目标、资源、责任、方法、时机与退出条件",
+      "constraints": "TestPlan为测试子计划，不等于规程或用例集",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "TestExecution",
+      "label_zh": "执行",
+      "label_en": "Test execution",
+      "aliases": [
+        "Run",
+        "TestRun"
+      ],
+      "context": "执行",
+      "definition": "固定设计/配置的一次运行",
+      "constraints": "TestRun为别名；默认类型统一用TestExecution；重跑新建身份，不覆盖旧失败",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "TestResult",
+      "label_zh": "结果",
+      "label_en": "Test result",
+      "aliases": [],
+      "context": "执行",
+      "definition": "本次观察、测量和步骤结果的结构化记录，可引用Verdict",
+      "constraints": "不等于原始日志、执行生命周期或整体验收结论",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "Verdict",
+      "label_zh": "判定",
+      "label_en": "Verdict",
+      "aliases": [],
+      "context": "执行/评价",
+      "definition": "按既定判据对特定结果作出的通过、失败等决定",
+      "constraints": "可由结果记录引用；不等同执行生命周期或产品整体验收结论",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "Evidence",
+      "label_zh": "证据",
+      "label_en": "Evidence",
+      "aliases": [],
+      "context": "证据",
+      "definition": "支持具体主张的可追源信息/工件",
+      "constraints": "带配置、时间和方法；有文件不等于充分",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "Conclusion",
+      "label_zh": "结论",
+      "label_en": "Conclusion",
+      "aliases": [],
+      "context": "评价",
+      "definition": "有责任人、范围、依据及限制的判断",
+      "constraints": "用例通过不能扩大成产品全面合格",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "EquipmentTestability",
+      "label_zh": "装备测试性",
+      "label_en": "Equipment testability",
+      "aliases": [],
+      "context": "诊断",
+      "definition": "判断工作状态及检测/隔离故障的能力",
+      "constraints": "见[01](01-基础与总则.md)；不等于代码覆盖率",
+      "source_level": "G+M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "SoftwareTestability",
+      "label_zh": "软件可测试性",
+      "label_en": "Software testability",
+      "aliases": [],
+      "context": "软件设计",
+      "definition": "建立条件、控制输入、观察行为、隔离依赖及重复验证的能力",
+      "constraints": "细化可观测性、可控性与成本，不套诊断指标",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "DiagnosticFault",
+      "label_zh": "故障",
+      "label_en": "Fault",
+      "aliases": [],
+      "context": "诊断",
+      "definition": "按产品模型识别的异常状态/原因或模式",
+      "constraints": "对软件fault另建映射；告警不等于已证实故障",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "Failure",
+      "label_zh": "失效",
+      "label_en": "Failure",
+      "aliases": [],
+      "context": "产品",
+      "definition": "不能实现规定功能/性能的可观察事件",
+      "constraints": "区别根因、缺陷及测试工具崩溃",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "Defect",
+      "label_zh": "缺陷",
+      "label_en": "Defect",
+      "aliases": [
+        "Bug"
+      ],
+      "context": "改进",
+      "definition": "需求、设计、实现或工件中的不满足项",
+      "constraints": "可以尚未触发失效；异常不自动归因产品",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "Anomaly",
+      "label_zh": "异常",
+      "label_en": "Anomaly",
+      "aliases": [],
+      "context": "执行/改进",
+      "definition": "偏离预期、需要调查的观察",
+      "constraints": "可来自产品、设计、环境或工具，调查后归因",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "FalseAlarm",
+      "label_zh": "虚警",
+      "label_en": "False alarm",
+      "aliases": [],
+      "context": "诊断",
+      "definition": "按约定规则确认无对应故障的报警",
+      "constraints": "CND/RTOK不自动等于虚警；见[06](06-使用与改进.md)",
+      "source_level": "G+M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "Baseline",
+      "label_zh": "基线",
+      "label_en": "Baseline",
+      "aliases": [],
+      "context": "需求/配置",
+      "definition": "受控版本集合",
+      "constraints": "可被替代，历史身份不变",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "Configuration",
+      "label_zh": "配置",
+      "label_en": "Configuration",
+      "aliases": [],
+      "context": "执行",
+      "definition": "被测对象、依赖、参数、数据与环境组合",
+      "constraints": "“最新版”不是可复现身份",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "Observation",
+      "label_zh": "观察",
+      "label_en": "Observation",
+      "aliases": [
+        "实测值（数值）"
+      ],
+      "context": "执行",
+      "definition": "实际采集的输出、事件、数值和时间",
+      "constraints": "不为迁就预期修改失败观察",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "ExpectedOutcome",
+      "label_zh": "预期",
+      "label_en": "Expected outcome",
+      "aliases": [
+        "预期结果"
+      ],
+      "context": "设计",
+      "definition": "需求/模型推导的目标行为或范围",
+      "constraints": "执行前确定；不复制被测实现作独立答案",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    },
+    {
+      "canonical_name": "AcceptanceCriterion",
+      "label_zh": "判据",
+      "label_en": "Acceptance criterion",
+      "aliases": [
+        "合格判据"
+      ],
+      "context": "设计/评价",
+      "definition": "观察到判定的比较规则",
+      "constraints": "含单位、容差、时间窗、缺失数据；阈值不等于置信结论",
+      "source_level": "M",
+      "source_resource": "resources/10-领域模型与统一语言.md"
+    }
+  ]
+}

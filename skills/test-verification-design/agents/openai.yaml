@@ -1,0 +1,4 @@
+interface:
+  display_name: "测试与验证设计"
+  short_description: "领域模型、统一语言、多标准参考与证据追踪"
+  default_prompt: "用 $test-verification-design 为这个测试或验证设计需求建立领域模型和统一语言，并给出需求、设计与证据的追踪关系。"
