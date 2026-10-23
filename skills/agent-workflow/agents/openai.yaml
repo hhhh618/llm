@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent 工作流"
+  short_description: "以验收驱动 Agent 工作流设计、诊断、恢复、按需并行和持续评测"
+  default_prompt: "用 $agent-workflow 设计或改进这个 Agent 工作流，先定义验收与单 Agent 基线，再按证据优化工具、上下文、恢复、并行和评测。"

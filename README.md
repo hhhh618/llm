@@ -13,6 +13,7 @@ knowledge, preferences, workflows, and AI-agent instructions.
 | --- | --- |
 | [personal-twin](skills/personal-twin/SKILL.md) | 按需使用个人知识、偏好和工作流 |
 | [knowledge-maintenance](skills/knowledge-maintenance/SKILL.md) | 整理可复用的非敏感知识 |
+| [agent-workflow](skills/agent-workflow/SKILL.md) | 以验收驱动 Agent 工作流设计、诊断、恢复、按需并行和持续评测 |
 | [test-verification-design](skills/test-verification-design/README.md) | 测试与验证设计：领域模型、统一语言、多标准参考与证据追踪 |
 
 `test-verification-design` 面向测试/验证平台、诊断工具及普通软件的需求、领域模型、架构、接口和验证方案，也保留装备测试性工作、条款导读及指标计算能力。此次迁入保留 Skill `2.1.0` 内容；脚本的两处既有问题、标准适用边界和证据核验要求见其 [README](skills/test-verification-design/README.md)。
@@ -30,6 +31,7 @@ llm/
 ├── skills/
 │   ├── personal-twin/
 │   ├── knowledge-maintenance/
+│   ├── agent-workflow/
 │   └── test-verification-design/
 ├── tools/
 │   ├── check_plugin.py
@@ -67,6 +69,22 @@ claude plugin install llm@llm
 /llm:test-verification-design 为库存预占 API 设计正常、边界、并发和故障恢复验证方案。
 ```
 
+### Agent 工作流技能
+
+`agent-workflow` Skill `1.0.0` 将“验收定义 → 单 Agent 基线 → 工具与上下文优化 → 状态恢复 → 按需并行 → 持续评测”作为渐进决策顺序。支持新建、诊断、局部改进、评测和按此方法执行复杂任务；已有能力可沿用，小任务采用轻量核验。技能提供验收与委派契约、恢复和幂等规则、可比预算评测及一手来源，不依赖特定框架或额外 MCP 服务。
+
+Codex 调用示例：
+
+```text
+用 $agent-workflow 诊断现有研究 Agent 遗漏引用的问题，保留现有架构，先定义验收并检查单 Agent 基线，再做最小改进和验证。
+```
+
+Claude Code 调用示例：
+
+```text
+/llm:agent-workflow 为订单助手设计可恢复的工具工作流，明确外部操作结果未知时的处理和验收方法。
+```
+
 ## 更新已安装插件
 
 Codex 先刷新市场，再安装该市场的插件版本：
@@ -87,12 +105,12 @@ claude plugin update llm@llm
 
 ## 版本与发布
 
-插件版本记录在 [Codex 清单](.codex-plugin/plugin.json) 与 [Claude Code 清单](.claude-plugin/plugin.json)，两处保持一致。Skill 自身的专业内容版本记录在其元数据中，独立于插件版本：本次插件发布为 `0.2.0`，迁入的 `test-verification-design` 为 `2.1.0`。后续最新版本以清单和 [CHANGELOG](CHANGELOG.md) 为准。
+插件版本记录在 [Codex 清单](.codex-plugin/plugin.json) 与 [Claude Code 清单](.claude-plugin/plugin.json)，两处保持一致。Skill 自身的内容版本记录在其元数据中，独立于插件版本：本次插件发布为 `0.3.0`，新增 `agent-workflow` 为 `1.0.0`，`test-verification-design` 保持 `2.1.0`。后续最新版本以清单和 [CHANGELOG](CHANGELOG.md) 为准。
 
 长期维护只需继续在此仓库修改共享内容。准备下一次插件发布时，在仓库根目录运行：
 
 ```sh
-python3 tools/release_plugin.py 0.2.1 --note "描述本次变更"
+python3 tools/release_plugin.py 0.3.1 --note "描述本次变更"
 python3 tools/check_plugin.py
 ```
 

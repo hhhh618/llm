@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.0 - 2026-10-23
+
+- 新增 agent-workflow Skill 1.0.0：以验收、单 Agent 基线、工具与上下文、恢复、按需并行和持续评测渐进设计或改进工作流；提供按需参考模板、一手来源与双宿主调用示例。
+
 ## 0.2.0 — 2026-10-16
 
 - 将 `test-verification-design` Skill `2.1.0` 迁入 `skills/test-verification-design/`，与 `personal-twin`、`knowledge-maintenance` 共享 `llm` 插件。
