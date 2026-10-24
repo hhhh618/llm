@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "scope": {
+    "purpose": "Clarify inventory reservation before implementing checkout integration",
+    "in_scope": ["Reserve available stock", "Release an existing reservation", "Concurrent reservation requests"],
+    "out_of_scope": ["Payment confirmation", "Shipment", "Cross-warehouse allocation"],
+    "assumptions": ["Illustrative draft: confirm quantities, lifecycle, ownership and concurrency requirements with the domain owner before implementation", "No inventory implementation or execution evidence is supplied by this example"]
+  },
+  "contexts": [
+    {"id": "CTX-INVENTORY", "key": "inventory", "label": "Inventory", "responsibility": "Own available quantities and the reservation lifecycle", "revision": 1}
+  ],
+  "concepts": [
+    {"id": "CON-STOCK", "context_id": "CTX-INVENTORY", "name": "inventory.stock-item", "revision": 1, "status": "draft", "definition": "One SKU in one stock location; its available quantity excludes active reservations"},
+    {"id": "CON-RESERVATION", "context_id": "CTX-INVENTORY", "name": "inventory.reservation", "revision": 1, "status": "draft", "definition": "An identified claim on a positive stock quantity; active or released. Success means an active claim, not successful payment"}
+  ],
+  "rules": [
+    {"id": "RULE-RESERVE-AVAILABLE", "context_id": "CTX-INVENTORY", "name": "inventory.reservation.claim-available-quantity", "revision": 1, "status": "draft", "statement": "At an atomic reservation decision, a positive requested quantity within current availability creates an active claim and reduces availability by that quantity", "concept_ids": ["CON-STOCK", "CON-RESERVATION"]},
+    {"id": "RULE-NO-OVERSELL", "context_id": "CTX-INVENTORY", "name": "inventory.reservation.keep-available-quantity-nonnegative", "revision": 1, "status": "draft", "statement": "All concurrent reservation decisions preserve available quantity >= 0; a request above remaining availability is rejected for insufficient stock without creating an active claim", "concept_ids": ["CON-STOCK", "CON-RESERVATION"]},
+    {"id": "RULE-RELEASE-ONCE", "context_id": "CTX-INVENTORY", "name": "inventory.reservation.release-quantity-once", "revision": 1, "status": "draft", "statement": "Releasing an active reservation returns its quantity once; repeated release does not change availability", "concept_ids": ["CON-STOCK", "CON-RESERVATION"]}
+  ],
+  "stories": [
+    {"id": "US-RESERVE", "context_id": "CTX-INVENTORY", "name": "inventory.reserve-stock-for-checkout", "revision": 1, "status": "draft", "role": "Checkout coordinator", "capability": "Reserve a requested stock quantity", "benefit": "Promise checkout stock only when an active reservation exists", "concept_ids": ["CON-STOCK", "CON-RESERVATION"]},
+    {"id": "US-RELEASE", "context_id": "CTX-INVENTORY", "name": "inventory.release-stock-after-cancellation", "revision": 1, "status": "draft", "role": "Checkout coordinator", "capability": "Release a cancelled checkout reservation", "benefit": "Make its stock available for other checkouts", "concept_ids": ["CON-STOCK", "CON-RESERVATION"]}
+  ],
+  "criteria": [
+    {"id": "AC-RESERVE-AVAILABLE", "context_id": "CTX-INVENTORY", "name": "inventory.reservation.activate-claim-for-available-quantity", "revision": 1, "status": "draft", "story_ids": ["US-RESERVE"], "rule_ids": ["RULE-RESERVE-AVAILABLE"], "concept_ids": ["CON-STOCK", "CON-RESERVATION"], "condition": "At the reservation decision, the positive requested quantity is within current availability", "expected": "An active reservation is created for that quantity and availability decreases by the same quantity"},
+    {"id": "AC-NO-OVERSELL", "context_id": "CTX-INVENTORY", "name": "inventory.reservation.prevent-overselling", "revision": 1, "status": "draft", "story_ids": ["US-RESERVE"], "rule_ids": ["RULE-NO-OVERSELL"], "concept_ids": ["CON-STOCK", "CON-RESERVATION"], "condition": "Concurrent requests target the same available stock", "expected": "Successful reservations never exceed available quantity and availability stays nonnegative; requests above remaining availability are rejected for insufficient stock without an active claim"},
+    {"id": "AC-RELEASE-ONCE", "context_id": "CTX-INVENTORY", "name": "inventory.reservation.make-repeated-release-idempotent", "revision": 1, "status": "draft", "story_ids": ["US-RELEASE"], "rule_ids": ["RULE-RELEASE-ONCE"], "concept_ids": ["CON-RESERVATION", "CON-STOCK"], "condition": "The same identified reservation is released repeatedly", "expected": "Only its first active-to-released transition returns stock"},
+    {"id": "AC-RESTORE", "context_id": "CTX-INVENTORY", "name": "inventory.reservation.restore-availability-after-release", "revision": 1, "status": "draft", "story_ids": ["US-RESERVE", "US-RELEASE"], "rule_ids": ["RULE-RESERVE-AVAILABLE", "RULE-NO-OVERSELL", "RULE-RELEASE-ONCE"], "concept_ids": ["CON-STOCK", "CON-RESERVATION"], "condition": "A successful reservation is later released", "expected": "Availability returns to its value before the reservation, absent other stock changes"}
+  ],
+  "cases": [
+    {"id": "TC-LAST-UNIT", "context_id": "CTX-INVENTORY", "name": "inventory.reservation.concurrent-requests-for-last-unit", "revision": 1, "status": "draft", "criterion_ids": ["AC-RESERVE-AVAILABLE", "AC-NO-OVERSELL"], "given": "One unit available for a stock item, no active reservations; both requests are valid and there are no unrelated failures", "when": "Two distinct requests concurrently reserve one unit each", "then": "Exactly one succeeds with an active reservation; the other fails for insufficient stock; availability is zero", "automation": null},
+    {"id": "TC-RELEASE-TWICE", "context_id": "CTX-INVENTORY", "name": "inventory.reservation.release-same-reservation-twice", "revision": 1, "status": "draft", "criterion_ids": ["AC-RELEASE-ONCE", "AC-RESTORE"], "given": "Two units available initially; one is reserved successfully", "when": "The same reservation is released twice", "then": "Availability is two after each release and the reservation remains released", "automation": null},
+    {"id": "TC-ROUND-TRIP", "context_id": "CTX-INVENTORY", "name": "inventory.reservation.reserve-and-release-without-other-changes", "revision": 1, "status": "draft", "criterion_ids": ["AC-RESERVE-AVAILABLE", "AC-NO-OVERSELL", "AC-RESTORE"], "given": "Three units available initially, no other stock changes", "when": "A request reserves two units and then releases that reservation", "then": "Availability moves from three to one to three", "automation": null}
+  ],
+  "implementations": [],
+  "executions": []
+}

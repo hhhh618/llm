@@ -1,0 +1,24 @@
+name: Validate plugin
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Check shared plugin structure and references
+        run: python3 tools/check_plugin.py
+      - name: Check script and specification regressions
+        run: python3 -m unittest discover -s tests -v
+      - name: Check the domain specification example
+        run: python3 skills/domain-spec-workflow/scripts/spec_workflow.py check skills/domain-spec-workflow/examples/inventory/spec.json --require-coverage

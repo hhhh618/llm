@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "scope": {
+    "purpose": "Replace with the intended outcome before defining stories",
+    "in_scope": [],
+    "out_of_scope": [],
+    "assumptions": []
+  },
+  "contexts": [],
+  "concepts": [],
+  "rules": [],
+  "stories": [],
+  "criteria": [],
+  "cases": [],
+  "implementations": [],
+  "executions": []
+}

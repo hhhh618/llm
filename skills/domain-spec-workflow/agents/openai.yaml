@@ -1,0 +1,4 @@
+interface:
+  display_name: "领域规格工作流"
+  short_description: "从领域词到 US–AC–TC、实现与活文档，按依赖委派并追踪验证证据"
+  default_prompt: "使用 $domain-spec-workflow 先明确这个功能的范围、上下文和领域词，再建立 US–AC–TC，按需委派 subagent，完成实现、验证与活文档。"
