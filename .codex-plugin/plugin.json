@@ -9,13 +9,14 @@
   "interface": {
     "displayName": "liliming’s Digital Twin",
     "shortDescription": "liliming’s personal digital twin.",
-    "longDescription": "A personal knowledge base and workflow layer for AI coding agents, including acceptance-driven agent workflows, domain-driven design with bounded contexts and conceptual integrity, testing and verification design, standards references, and evidence traceability.",
+    "longDescription": "A personal knowledge base and workflow layer for AI coding agents: domain modeling and conceptual integrity, domain-first US–AC–TC workflows with subagent task contracts, specification impact checks and living documentation, agent workflow evaluation, testing and verification design, standards references, and evidence traceability.",
     "developerName": "liliming",
     "category": "Productivity",
     "capabilities": [
       "个人知识与工作流",
       "Agent 工作流设计与评测",
       "DDD 领域建模与概念一致性",
+      "领域规格、执行与活文档",
       "测试与验证设计",
       "领域模型与统一语言",
       "多标准参考与证据追踪"
