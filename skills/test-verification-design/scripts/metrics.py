@@ -146,6 +146,13 @@ def count_assessment(data):
     for smaller, larger in constraints:
         if smaller in counts and larger in counts and counts[smaller] > counts[larger]:
             raise InputError(f"{smaller} 不得大于 {larger}")
+    population = {"faults", "detected", "critical_faults", "detected_critical_faults"}
+    if population <= counts.keys():
+        # 严重故障与已检出故障属于同一总体，二者并集不能超过总体。
+        minimum = max(0, counts["critical_faults"] + counts["detected"] - counts["faults"])
+        if counts["detected_critical_faults"] < minimum:
+            raise InputError("同一故障总体中 detected_critical_faults 不得小于 "
+                             f"max(0, critical_faults + detected - faults) = {minimum}")
     definitions = {"FDR": ("detected", "faults", "评估点估计：正确检测的责任故障次数 / 责任故障总次数"),
                    "CFDR": ("detected_critical_faults", "critical_faults", "评估点估计：正确检测的严重故障次数 / 严重故障总次数"),
                    "FIR": ("isolated", "detected", "评估点估计：满足规定隔离模糊度的故障次数 / 正确检测的故障次数"),

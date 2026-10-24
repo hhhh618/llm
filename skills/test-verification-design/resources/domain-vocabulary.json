@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "skill_version": "2.1.0",
+  "skill_version": "2.2.0",
   "definition_status": "engineering_working_definitions_not_verbatim_standard_terms",
   "project_override": "保留项目已确认词汇与上下文，映射差异，不直接重命名外部契约",
   "terms": [
@@ -66,9 +66,9 @@
       "label_zh": "验证目标",
       "label_en": "Verification objective",
       "aliases": [],
-      "context": "设计/评价",
+      "context": "设计",
       "definition": "明确要证明的要求或预期用途及其评价范围",
-      "constraints": "目标类型区分verification与validation，不将确认目标隐式改为要求符合性",
+      "constraints": "由设计维护版本，评价按版本引用；区分verification与validation目标",
       "source_level": "M",
       "source_resource": "resources/10-领域模型与统一语言.md"
     },
@@ -161,9 +161,9 @@
       "label_zh": "判定",
       "label_en": "Verdict",
       "aliases": [],
-      "context": "执行/评价",
+      "context": "执行",
       "definition": "按既定判据对特定结果作出的通过、失败等决定",
-      "constraints": "可由结果记录引用；不等同执行生命周期或产品整体验收结论",
+      "constraints": "绑定结果与判据版本，评价引用不反写；不等同生命周期或产品验收结论",
       "source_level": "M",
       "source_resource": "resources/10-领域模型与统一语言.md"
     },
@@ -251,9 +251,9 @@
       "label_zh": "异常",
       "label_en": "Anomaly",
       "aliases": [],
-      "context": "执行/改进",
-      "definition": "偏离预期、需要调查的观察",
-      "constraints": "可来自产品、设计、环境或工具，调查后归因",
+      "context": "改进",
+      "definition": "由偏离预期的观察提出、需要调查的问题记录",
+      "constraints": "关联原观察；可来自产品、设计、环境或工具，调查后归因",
       "source_level": "M",
       "source_resource": "resources/10-领域模型与统一语言.md"
     },
@@ -323,9 +323,9 @@
       "aliases": [
         "合格判据"
       ],
-      "context": "设计/评价",
+      "context": "设计",
       "definition": "观察到判定的比较规则",
-      "constraints": "含单位、容差、时间窗、缺失数据；阈值不等于置信结论",
+      "constraints": "执行/评价引用发布版本；含单位、容差、时间窗、缺失数据；阈值不等于置信结论",
       "source_level": "M",
       "source_resource": "resources/10-领域模型与统一语言.md"
     }

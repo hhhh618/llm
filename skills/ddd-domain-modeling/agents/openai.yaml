@@ -1,0 +1,4 @@
+interface:
+  display_name: "DDD 领域建模"
+  short_description: "澄清领域核心概念、划分限界上下文，并验证模型与整体设计的概念一致性"
+  default_prompt: "使用 $ddd-domain-modeling 评审这项业务的核心概念、上下文边界和不变量，并用具体场景验证概念一致性。"

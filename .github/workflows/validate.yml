@@ -1,0 +1,22 @@
+name: Validate plugin
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Check shared plugin structure and references
+        run: python3 tools/check_plugin.py
+      - name: Check calculation and page provenance regressions
+        run: python3 -m unittest discover -s tests -v
