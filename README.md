@@ -14,6 +14,7 @@ knowledge, preferences, workflows, and AI-agent instructions.
 | [personal-twin](skills/personal-twin/SKILL.md) | 按需使用个人知识、偏好和工作流 |
 | [knowledge-maintenance](skills/knowledge-maintenance/SKILL.md) | 整理可复用的非敏感知识 |
 | [agent-workflow](skills/agent-workflow/SKILL.md) | 以验收驱动 Agent 工作流设计、诊断、恢复、按需并行和持续评测 |
+| [buddhist-practice-companion](skills/buddhist-practice-companion/SKILL.md) | 佛法学习伴侣：按用户目标提供可选修学路径与经典依据 |
 | [test-verification-design](skills/test-verification-design/README.md) | 测试与验证设计：领域模型、统一语言、多标准参考与证据追踪 |
 
 `test-verification-design` 面向测试/验证平台、诊断工具及普通软件的需求、领域模型、架构、接口和验证方案，也保留装备测试性工作、条款导读及指标计算能力。此次迁入保留 Skill `2.1.0` 内容；脚本的两处既有问题、标准适用边界和证据核验要求见其 [README](skills/test-verification-design/README.md)。
@@ -32,6 +33,7 @@ llm/
 │   ├── personal-twin/
 │   ├── knowledge-maintenance/
 │   ├── agent-workflow/
+│   ├── buddhist-practice-companion/
 │   └── test-verification-design/
 ├── tools/
 │   ├── check_plugin.py
