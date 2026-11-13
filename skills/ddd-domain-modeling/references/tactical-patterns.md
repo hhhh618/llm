@@ -71,7 +71,7 @@ Use these building blocks inside each Bounded Context after strategic design.
 ## Invariants Example (Port Mirroring)
 - A session must have at least one source and one destination before it can be activated.
 - Destination port cannot be the same as any source port (or must follow device-specific rules).
-- Maximum number of concurrent sessions per device.
+- A device-wide session limit needs an appropriate device-level consistency owner or coordination; one session aggregate cannot enforce the total alone.
 - Direction must be explicitly set for every source.
 
-Capture these as methods or private validation on the Aggregate Root.
+Place session-local rules in the session aggregate. Decide the scope and owner of device-wide constraints separately and validate the actual device rules with a domain expert.

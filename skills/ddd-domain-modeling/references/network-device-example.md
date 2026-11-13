@@ -70,7 +70,7 @@ Other related contexts (not detailed here): Device Inventory, Port Management, M
 **Invariants**:
 1. At least one source and one destination required before activation.
 2. Destination must not conflict with sources according to device rules.
-3. Session count on the device must not exceed hardware limit.
+3. A device-wide session limit, if applicable, needs a device-level consistency owner or explicit coordination; a single session cannot enforce the global count by itself.
 4. Direction is mandatory for every source.
 5. Once Active, certain configuration changes may be restricted (device-dependent).
 
@@ -109,4 +109,4 @@ Other related contexts (not detailed here): Device Inventory, Port Management, M
 - Explore remote mirroring as a separate context or extension
 - Implement domain events for integration with monitoring platforms
 
-This example demonstrates moving from operator intent through Event Storming to a rich Aggregate that protects business rules.
+This illustrative example requires device-specific confirmation. The session aggregate protects session-local rules; device-wide limits need an appropriate separate consistency owner or coordination.
