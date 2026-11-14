@@ -1,6 +1,6 @@
 ---
 name: ddd-domain-modeling
-description: Facilitate Event Storming and domain-driven design for business or technical domains, from discovery and process mapping to bounded contexts, aggregates, business rules, and scenario validation. Use for 事件风暴, 领域建模, DDD, or aggregate and context design.
+description: Facilitate Event Storming and domain-driven design for business or technical domains, from discovery and process mapping to bounded contexts, aggregates, business rules, and scenario validation. Use when the user asks for 建模, 领域建模, 领域划分, or 事件风暴 in a business or technical domain, as well as DDD, aggregate design, or bounded context design.
 ---
 
 # Event Storming and Domain Modeling
